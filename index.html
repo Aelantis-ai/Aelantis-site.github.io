@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aelantis — AI Services & Consulting</title>
+  <meta name="description" content="Aelantis is an AI services and consulting practice in Tampa Bay, Florida. We help organizations decide where AI is worth using, then build and run it." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Aelantis — AI Services & Consulting" />
+  <meta property="og:description" content="We help organizations decide where AI is worth using, then build and run it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <style>
+    :root {
+      --navy:      #0a1a2f;
+      --navy-soft: #0e2240;
+      --cyan:      #36c5f0;
+      --cyan-soft: #7fd9f5;
+      --ink:       #e8f1fb;
+      --muted:     #9fb3c8;
+      --line:      rgba(127, 217, 245, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--navy);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(54, 197, 240, 0.12), transparent 70%);
+      background-repeat: no-repeat;
+    }
+
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 64px;
+    }
+
+    .logo {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      margin-bottom: 32px;
+      box-shadow: 0 0 0 1px var(--line), 0 16px 48px rgba(0,0,0,0.45);
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .tagline {
+      margin-top: 16px;
+      font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+      color: var(--cyan-soft);
+      font-weight: 500;
+    }
+
+    .bio {
+      margin: 28px auto 0;
+      max-width: 600px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: var(--navy);
+    }
+    .btn-primary:hover { background: var(--cyan-soft); }
+
+    .btn-ghost {
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .btn-ghost:hover { border-color: var(--cyan); }
+
+    /* What we do */
+    .section { padding: 72px 0; border-top: 1px solid var(--line); }
+
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -0.01em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--navy-soft);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: var(--cyan); }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--cyan-soft);
+    }
+    .card p { color: var(--muted); font-size: 0.97rem; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 48px 24px 56px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    footer a { color: var(--cyan-soft); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { margin-bottom: 12px; }
+    .footer-links a { margin: 0 10px; }
+
+    @media (max-width: 640px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img class="logo" src="logo.png" alt="Aelantis logo" />
+    <h1>Aelantis</h1>
+    <p class="tagline">Turning intelligence into advantage.</p>
+    <p class="bio">
+      Aelantis is an AI services and consulting practice in Tampa Bay, Florida.
+      We help organizations decide where AI is worth using, then build and run it
+      for them. We care about work that holds up once it is in real use.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:info@aelantis.com">Email us</a>
+      <!-- Replace the href below with your real LinkedIn URL, or delete this line -->
+      <a class="btn btn-ghost" href="https://www.linkedin.com/company/aelantis" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <h2>What we do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Advise</h3>
+          <p>We help you figure out where AI fits, what it is worth, and what to skip. Clear answers before you spend.</p>
+        </div>
+        <div class="card">
+          <h3>Build</h3>
+          <p>We design and build the solution, from a first working version to something your team can rely on.</p>
+        </div>
+        <div class="card">
+          <h3>Run</h3>
+          <p>We keep it working in the real world: monitoring, improving, and adjusting as your needs change.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:info@aelantis.com">info@aelantis.com</a>
+    </div>
+    <div>Aelantis · Tampa Bay, Florida</div>
+    <div style="margin-top:8px; opacity:0.7;">&copy; <span id="year"></span> Aelantis</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
